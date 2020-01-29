@@ -1,0 +1,7 @@
+#!/bin/bash
+
+filenameWithoutExtension="${1%.*}"
+qnapi "$1"
+printf "\xEF\xBB\xBF" | cat - "${filenameWithoutExtension}.srt" > "${filenameWithoutExtension}_bom.srt"
+rm "${filenameWithoutExtension}.srt"
+mv "${filenameWithoutExtension}_bom.srt" "${filenameWithoutExtension}.srt"
