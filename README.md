@@ -4,4 +4,4 @@ I was using Raspberry Pi Zero as my DLNA server (miniDLNA) and I was using QNapi
 So I created this `napi` bash script which can be pasted to `/usr/local/bin` and then run in a folder with a movie using command:
 `napi <movie_file>`
 
-It will use QNapi to download the subtitles and then convert them to UTF-8 with BOM header, this way we will fetch subtitles which will be recognized by miniDLNA and enjoy our movie with subtitles. Remember to change QNapi options to download subtitles as SRT and conversion of a downloaded subtitles should be set to UTF-8 format.
+It will use QNapi to download the subtitles and then convert them to UTF-8 with BOM header, this way we will fetch subtitles which will be recognized by miniDLNA and enjoy our movie with subtitles. Remember to change QNapi options to download subtitles as SRT and conversion of the downloaded subtitles should be set to UTF-8 format.
