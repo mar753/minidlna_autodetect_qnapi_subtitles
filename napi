@@ -2,6 +2,9 @@
 
 filenameWithoutExtension="${1%.*}"
 qnapi "$1"
+if [ $? != 0 ]; then
+  exit 1;
+fi
 printf "\xEF\xBB\xBF" | cat - "${filenameWithoutExtension}.srt" > "${filenameWithoutExtension}_bom.srt"
 rm "${filenameWithoutExtension}.srt"
 mv "${filenameWithoutExtension}_bom.srt" "${filenameWithoutExtension}.srt"
