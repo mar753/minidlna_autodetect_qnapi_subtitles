@@ -4,6 +4,7 @@ If you are using miniDLNA on Raspberry Pi (Zero) as a DLNA server and using QNap
 - QNapi execution
 - creates from the downloaded SRT file a new SRT temporary file with the UTF-8 BOM header (`0xEFBBBF`) added (just in case)
 - removes originally downloaded SRT file and then renames the temporary one (with BOM) to the original filename
+
 There is no need to add a BOM header, you can just make a copy of the originally downloaded SRT file, remove originally downloaded file and rename the copy to the originally downloaded filename.
 Only in this way miniDLNA will detect your new subtitle file and you will not have to run `sudo minidlnad -R` & `sudo service minidlna restart` manually.
 
